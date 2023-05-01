@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 02 - HTML </title>
+
+    <!-- Estilação composta no Head-->
+    <style>
+        h3 {
+            font-size: 50px;
+        }
+    </style>
+    <!--Estilização em arquivo CSS separado-->
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div>
@@ -23,11 +32,17 @@
         <h3>H3</h3>
         <h4>H4</h4>
         <h5>H5</h5>
+        <h6>H6</h6>
     </div>
     <div>
+        <!-- tag "a" usamos para criar hiperlink, onde o href é o caminho e o target é o comportamento do navegador.-->
         <a href="http://www.google.com/"><p>Texto do hiper link</p></a>
         <a href="https://g1.globo.com/" target="g1_iframe"><p>Abra o G1 abaixo</p></a>
         <iframe name="g1_iframe" width="400px" height="400px"></iframe> <!-- ancoragem usando tag iframe-->
+    </div>
+    <div>
+        <!-- Estilização inline-->
+        <a style="color: green; font-family: 'Times New Roman', Times, serif; font-weight: bold;" href="http://www.google.com/"><p>Texto do hiper link com "estilo"</p></a>
     </div>
 </body>
 </html>
