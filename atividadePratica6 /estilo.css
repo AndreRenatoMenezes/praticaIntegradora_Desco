@@ -1,0 +1,16 @@
+body{ 
+    background-color: #e8d3b6
+}
+H1{
+    text-align: center;
+    color: cornflowerblue;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow:  -1px -1px 0px #000,-1px 1px 0px #000,1px -1px 0px #000,1px 0px 0px #000;
+}
+#roxo{
+    color: darkmagenta;
+    text-decoration:underline;
+}
+#azul{
+    color: darkblue;
+}
