@@ -5,27 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade Prática 10 - Fundamentos JavaScript</title>
+    <script>
+
+        //cos():  Retorna o cosseno do número informado.
+        function calcularCosseno() {
+        var angulo = parseFloat(document.getElementById("angulo").value);
+        var radianos = angulo * (Math.PI / 180);
+        var cosseno = Math.cos(radianos);
+        document.getElementById("resultadoCosseno").textContent = "O cosseno de " + angulo + " graus é: " + cosseno;
+        }
+
+        function encontrarMinMax() {
+        var numeros = document.getElementById("numeros").value.split(",").map(Number);
+        var valorMaximo = Math.max(...numeros); //max(): Retorna o valor máximo dos números dados.
+        var valorMinimo = Math.min(...numeros); //min(): Retorna o valor mínimo dos números informados.
+        document.getElementById("resultadoMaximo").textContent = "O valor máximo é: " + valorMaximo;
+        document.getElementById("resultadoMinimo").textContent = "O valor mínimo é: " + valorMinimo;
+        }
+
+        //random(): Retorna um número aleatório entre 0 (inclusivo) e 1 (exclusivo).
+        function gerarNumeroAleatorio() {
+        var numeroAleatorio = Math.random();
+        document.getElementById("resultadoAleatorio").textContent = "Número aleatório: " + numeroAleatorio;
+        }
+    </script>
 </head>
 <body>
-    <script>
-        // Exemplo do uso dos métodos do objeto Math
+    <h1>Exemplo de Uso do Objeto Math com DOM</h1>
 
-        // Calcular o cosseno de um ângulo
-        var angulo = 45; // Ângulo em graus
-        var radianos = angulo * (Math.PI / 180); // Conversão para radianos
-        var cosseno = Math.cos(radianos);
-        console.log("O cosseno de " + angulo + " graus é: " + cosseno);
+    <h2>Calcular Cosseno</h2>
+    <label for="angulo">Ângulo (em graus):</label>
+    <input type="number" id="angulo">
+    <button onclick="calcularCosseno()">Calcular</button>
+    <p id="resultadoCosseno"></p>
 
-        // Encontrar o valor máximo e mínimo de um conjunto de números
-        var numeros = [10, 5, 8, 2, 20];
-        var valorMaximo = Math.max(...numeros);
-        var valorMinimo = Math.min(...numeros);
-        console.log("O valor máximo é: " + valorMaximo);
-        console.log("O valor mínimo é: " + valorMinimo);
+    <h2>Encontrar Valor Máximo e Mínimo</h2>
+    <label for="numeros">Números (separados por vírgula):</label>
+    <input type="text" id="numeros">
+    <button onclick="encontrarMinMax()">Encontrar</button>
+    <p id="resultadoMaximo"></p>
+    <p id="resultadoMinimo"></p>
 
-        // Gerar um número aleatório entre 0 e 1
-        var numeroAleatorio = Math.random();
-        console.log("Número aleatório: " + numeroAleatorio);
-    </script>
+    <h2>Gerar Número Aleatório</h2>
+    <button onclick="gerarNumeroAleatorio()">Gerar</button>
+    <p id="resultadoAleatorio"></p>
 </body>
 </html>
